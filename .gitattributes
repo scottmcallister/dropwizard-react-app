@@ -1,0 +1,3 @@
+# Ignore maven files in language statistics
+.mvn/* linguist-vendored
+mvnw* linguist-vendored

@@ -1,0 +1,6 @@
+
+
+logging:
+  level: INFO
+  loggers:
+    com.mrscottmcallister.apps: DEBUG
