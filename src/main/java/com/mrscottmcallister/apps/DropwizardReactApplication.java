@@ -1,5 +1,6 @@
 package com.mrscottmcallister.apps;
 
+import com.mrscottmcallister.apps.health.AppHealthCheck;
 import com.mrscottmcallister.apps.resources.HomeResource;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -25,6 +26,8 @@ public class DropwizardReactApplication extends Application<DropwizardReactConfi
     @Override
     public void run(final DropwizardReactConfiguration configuration,
                     final Environment environment) {
+        final AppHealthCheck healthCheck = new AppHealthCheck();
+        environment.healthChecks().register("app", healthCheck);
         environment.jersey().register(new HomeResource());
     }
 
