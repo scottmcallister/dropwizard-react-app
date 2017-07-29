@@ -1,8 +1,8 @@
 package com.mrscottmcallister.apps;
 
+import com.github.dirkraft.dropwizard.fileassets.FileAssetsBundle;
 import com.mrscottmcallister.apps.health.AppHealthCheck;
 import io.dropwizard.Application;
-import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
@@ -21,7 +21,7 @@ public class DropwizardReactApplication extends Application<DropwizardReactConfi
     @Override
     public void initialize(final Bootstrap<DropwizardReactConfiguration> bootstrap) {
         bootstrap.addBundle(new ViewBundle<DropwizardReactConfiguration>());
-        bootstrap.addBundle(new AssetsBundle("/assets", "/", "index.html"));
+        bootstrap.addBundle(new FileAssetsBundle("src/main/resources/assets", "/", "index.html"));
     }
 
     @Override
