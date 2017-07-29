@@ -4,6 +4,7 @@
   "description": "An example app for setting up React in a Dropwizard web app",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +24,8 @@
     "babel-preset-react": "^6.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "webpack": "^3.3.0"
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
   },
   "devDependencies": {
     "eslint": "^4.3.0",
